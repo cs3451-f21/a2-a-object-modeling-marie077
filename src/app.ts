@@ -94,7 +94,7 @@ class Drawing extends DrawingCommon {
         heightSegments = 8;  
         geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
         mesh = new THREE.Mesh( geometry, material);
-        mesh.position.set(4,-6, -5);
+        mesh.position.set(4,-6, -4);
         tentacles.add( mesh );
 
         //tentacle 5
