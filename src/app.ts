@@ -29,7 +29,7 @@ class Drawing extends DrawingCommon {
         head.add( mesh );
 
         //first eye
-        var eyeMaterial = new THREE.MeshToonMaterial( { color: 0x030303} );
+        var eyeMaterial = new THREE.MeshToonMaterial( { color: 0x473232} );
         radius = 1;  
         var detail = 3;  
         const geometryEye = new THREE.DodecahedronGeometry(radius, detail);
@@ -50,13 +50,14 @@ class Drawing extends DrawingCommon {
         const tubularSegments = 48;  
         const geometryNose = new THREE.TorusGeometry(radius, tubeRadius, radialSegments, tubularSegments);
         var meshNose = new THREE.Mesh(geometryNose, material);
-        meshNose.position.set(1,0,7);
+        meshNose.position.set(1,0,8);
         head.add(meshNose);
 
         //inner nose
+        var innerMaterial =  new THREE.MeshToonMaterial( { color: 0x1a1919} );
         const geometryInner = new THREE.DodecahedronGeometry(radius, detail);
-        var meshInner = new THREE.Mesh(geometryEye, eyeMaterial);
-        meshInner.position.set(1, 0, 7.1);
+        var meshInner = new THREE.Mesh(geometryEye, innerMaterial);
+        meshInner.position.set(1, 0, 8);
         head.add(meshInner);
        
         //octopus tentacles 
