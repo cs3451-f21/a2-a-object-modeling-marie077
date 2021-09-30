@@ -145,7 +145,7 @@ class Drawing extends DrawingCommon {
         plant.add(meshPlant);
 
         //petal
-        const petalColor = new THREE.MeshToonMaterial( { color: 0xf7c313} );
+        const petalColor = new THREE.MeshPhongMaterial({color: 0xf7c313 });
         radius = 2;  
         const geometryPetal = new THREE.OctahedronGeometry(radius);
         var meshPetal = new THREE.Mesh( geometryPetal, petalColor);
